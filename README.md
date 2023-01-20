@@ -1,4 +1,29 @@
 
+```
+cd docker
+bash build.sh
+bash run.sh
+containerName=soroswap-release5
+docker exec --tty --interactive $containerName 
+```
+
+```
+./quickstart.sh standalone
+```
+
+```
+docker exec -it soroswap-release5 sh -c "bash initialize.sh standalone"
+```
+
+
+```
+cd front-end
+yarn
+yarn dev
+```
+
+
+
 - SIMPLE AMM Uniswap v2 style
     - Simple smart contract x*y = z
     - Support only two tokens.
@@ -13,6 +38,7 @@
 
 
 ### Dependencies
+This version uses Preview 5. See https://soroban.stellar.org/docs/releases
 
 1. `soroban-cli v0.4.0`. See https://soroban.stellar.org/docs/getting-started/setup#install-the-soroban-cli
 2. `docker` (both Standalone and Futurenet backends require it).
